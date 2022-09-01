@@ -1,0 +1,14 @@
+.titleFiels{
+    width: 100%;
+    margin-bottom: 20px;
+    &::before, &::after{
+        display: none;
+    }
+    input{
+        font-size: 28px !important;
+    }
+}
+.editor{
+    font-size: 20px;
+    height: calc(100vh - 220px);
+}
