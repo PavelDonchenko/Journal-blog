@@ -8,10 +8,10 @@ const AddCommentForm: React.FC = () => {
   const inputRef = React.useRef(null);
 
   const handleSendComment = () => {
-    setInputHeight(1)
-    setInputValue('')
-  }
-  
+    setInputHeight(1);
+    setInputValue('');
+  };
+
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const _event = event as MouseEvent & {
@@ -43,7 +43,7 @@ const AddCommentForm: React.FC = () => {
       />
       {inputHeight > 1 && (
         <Button
-          onClick = {() => handleSendComment()}
+          onClick={() => handleSendComment()}
           className={styles.btn}
           style={{ backgroundColor: `${inputValue}` ? '#4683d9' : '#4683d987' }}
           variant="contained"

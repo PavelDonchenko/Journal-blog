@@ -2,11 +2,7 @@ import { MainLayout } from '../../layouts/MainLayout';
 import { FullPost } from '../../components/FullPost';
 import React from 'react';
 import { PostComments } from '../../components/PostComments';
-import { comments } from '../../data';
-import { GetServerSideProps, NextPage } from 'next';
-
-
-
+import { NextPage } from 'next';
 
 const FullPostPage: NextPage = () => {
   return (
@@ -16,7 +12,5 @@ const FullPostPage: NextPage = () => {
     </MainLayout>
   );
 };
-
-
 
 export default FullPostPage;

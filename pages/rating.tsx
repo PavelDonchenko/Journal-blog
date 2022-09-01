@@ -4,8 +4,6 @@ import { MainLayout } from '../layouts/MainLayout';
 import { FollowButton } from '../components/FollowButton';
 import { NextPage } from 'next';
 
-
-
 const Rating: NextPage = () => {
   return (
     <MainLayout>
@@ -34,23 +32,20 @@ const Rating: NextPage = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            
-              <TableRow>
-                <TableCell component="th" scope="row">
-                  <span className="mr-15">Vasya</span>
-                </TableCell>
-                <TableCell align="right">123</TableCell>
-                <TableCell align="right">
-                  <FollowButton />
-                </TableCell>
-              </TableRow>
-           
+            <TableRow>
+              <TableCell component="th" scope="row">
+                <span className="mr-15">Vasya</span>
+              </TableCell>
+              <TableCell align="right">123</TableCell>
+              <TableCell align="right">
+                <FollowButton />
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </Paper>
     </MainLayout>
   );
 };
-
 
 export default Rating;

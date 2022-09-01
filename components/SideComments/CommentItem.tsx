@@ -4,10 +4,7 @@ import Link from 'next/link';
 import { Avatar } from '@material-ui/core';
 import { IComment } from '../../types/types';
 
-
-
 export const CommentItem: React.FC<IComment> = (props) => {
-  
   return (
     <div className={styles.commentItem}>
       <div className={styles.userInfo}>

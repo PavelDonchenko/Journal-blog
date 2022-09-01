@@ -1,11 +1,7 @@
 import Link from 'next/link';
 import { Paper, Avatar, Typography, Button, Tabs, Tab } from '@material-ui/core';
-import {
-  SettingsOutlined as SettingsIcon,
-  TextsmsOutlined as MessageIcon,
-} from '@material-ui/icons';
+import { SettingsOutlined as SettingsIcon, TextsmsOutlined as MessageIcon } from '@material-ui/icons';
 
-import { Post } from '../../components/Post';
 import { MainLayout } from '../../layouts/MainLayout';
 
 export default function Profile() {
@@ -24,9 +20,7 @@ export default function Profile() {
           </div>
           <div>
             <Link href="/profile/settings">
-              <Button
-                style={{ height: 42, minWidth: 45, width: 45, marginRight: 10 }}
-                variant="contained">
+              <Button style={{ height: 42, minWidth: 45, width: 45, marginRight: 10 }} variant="contained">
                 <SettingsIcon />
               </Button>
             </Link>
@@ -51,9 +45,7 @@ export default function Profile() {
         </Tabs>
       </Paper>
       <div className="d-flex align-start">
-        <div className="mr-20 flex">
-          {/* <Post /> */}
-        </div>
+        <div className="mr-20 flex">{/* <Post /> */}</div>
         <Paper style={{ width: 300 }} className="p-20 mb-20" elevation={0}>
           <b>Подписчики</b>
           <div className="d-flex mt-15">

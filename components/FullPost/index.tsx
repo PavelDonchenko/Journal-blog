@@ -20,11 +20,7 @@ export const FullPost = () => {
           title
         </Typography>
         <div className={styles.text}>
-          
-            <Typography>
-              sadsfsdfsdfsdfsdnfmsdnf,nsd,mf,dms,mfndm,snfmsd,mnf,dsf,sd
-            </Typography>
-         
+          <Typography>sadsfsdfsdfsdfsdnfmsdnf,nsd,mf,dms,mfndm,snfmsd,mnf,dsf,sd</Typography>
 
           <div style={{ width: 250, marginLeft: -14 }}>
             <PostActions />

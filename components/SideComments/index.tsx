@@ -1,9 +1,9 @@
 import React from 'react';
 import ArrowRightIcon from '@material-ui/icons/NavigateNextOutlined';
+import clsx from 'clsx';
 
 import data from '../../data';
 import styles from './SideComments.module.scss';
-import clsx from 'clsx';
 import { CommentItem } from './CommentItem';
 
 export const SideComments = () => {
@@ -13,16 +13,12 @@ export const SideComments = () => {
     setVisible(!visible);
   };
 
-  
-
   return (
     <div className={clsx(styles.root, !visible && styles.rotated)}>
       <h3 onClick={toggleVisible}>
         Комментарии <ArrowRightIcon />
       </h3>
-      {visible && data.comments.popular.map((obj) => (
-        <CommentItem key = {obj.id} {...obj}/>
-      )) }
+      {visible && data.comments.popular.map((obj) => <CommentItem key={obj.id} {...obj} />)}
     </div>
   );
 };

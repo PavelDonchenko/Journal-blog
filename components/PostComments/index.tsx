@@ -1,14 +1,13 @@
 import React from 'react';
 import { Divider, Paper, Tab, Tabs, Typography } from '@material-ui/core';
+
 import { Comment } from '../Comment';
 import data from '../../data';
-import {IComment}  from '../../types/types';
 import AddCommentForm from '../AddCommentForm';
 
-
 export const PostComments: React.FC = () => {
-  const [activeTab, setActiveTab] = React.useState(0)
-  const comments = data.comments[!activeTab ? 'popular' : 'new']
+  const [activeTab, setActiveTab] = React.useState(0);
+  const comments = data.comments[!activeTab ? 'popular' : 'new'];
 
   return (
     <Paper elevation={0} className="mt-40 p-30">
@@ -18,7 +17,7 @@ export const PostComments: React.FC = () => {
         </Typography>
         <Tabs
           onChange={(_, newValue) => setActiveTab(newValue)}
-          value = {activeTab}
+          value={activeTab}
           className="mt-20"
           indicatorColor="primary"
           textColor="primary"
@@ -27,16 +26,10 @@ export const PostComments: React.FC = () => {
           <Tab label="Новые" />
         </Tabs>
         <Divider />
-         <AddCommentForm />
+        <AddCommentForm />
         <div className="mb-20" />
         {comments.map((obj) => (
-          <Comment
-            key={obj.id}
-            user={obj.user}
-            text={obj.text}
-            createdAt={obj.createdAt}
-            
-          />
+          <Comment key={obj.id} user={obj.user} text={obj.text} createdAt={obj.createdAt} />
         ))}
       </div>
     </Paper>

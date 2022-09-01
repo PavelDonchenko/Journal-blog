@@ -17,7 +17,6 @@ import AuthDialog from '../AuthDialog/AuthDialog';
 export const Header: React.FC = () => {
   const [isVisible, setIsVisible] = React.useState(false);
 
-
   const handleClickOpen = () => {
     setIsVisible(true);
   };
@@ -86,8 +85,8 @@ export const Header: React.FC = () => {
           Войти
         </div>
       </div>
-     
-      <AuthDialog onClose = {handleClose} visible = {isVisible} />
+
+      <AuthDialog onClose={handleClose} visible={isVisible} />
     </Paper>
   );
 };

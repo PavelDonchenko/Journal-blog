@@ -1,14 +1,11 @@
 import Head from 'next/head';
 import { MuiThemeProvider, CssBaseline } from '@material-ui/core';
 import { AppProps } from 'next/app';
+import 'macro-css';
 
 import { Header } from '../components/Header';
 import { theme } from '../theme';
-
 import '../styles/globals.scss';
-import 'macro-css';
-import { parseCookies } from 'nookies';
-
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -32,6 +29,5 @@ function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
-
 
 export default App;

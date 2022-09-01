@@ -15,12 +15,12 @@ export const Post = () => {
         </Link>
       </Typography>
       <Typography className="mt-10 mb-15">ssfsdfsd</Typography>
-        <img
-          src="https://img.freepik.com/premium-vector/beautiful-nature-landscape-drawing-scenery_18591-60461.jpg?w=740"
-          height={500}
-          width={600}
-          alt='sdfsdf'
-        />
+      <img
+        src="https://img.freepik.com/premium-vector/beautiful-nature-landscape-drawing-scenery_18591-60461.jpg?w=740"
+        height={500}
+        width={600}
+        alt="sdfsdf"
+      />
       <PostActions />
     </Paper>
   );

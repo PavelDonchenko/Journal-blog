@@ -1,18 +1,8 @@
-import {
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Divider,
-  TextField,
-  Typography,
-} from '@material-ui/core';
+import { Dialog, DialogContent, DialogContentText } from '@material-ui/core';
 import React, { FC } from 'react';
 import styles from './AuthDialog.module.scss';
 import Login from './Login';
-import Main from './MainAuth'
+import Main from './MainAuth';
 import Register from './Register';
 
 type Props = {
@@ -26,7 +16,6 @@ const AuthDialog: FC<Props> = ({ onClose, visible }) => {
   React.useEffect(() => {
     return () => {
       setFormType('main');
-      console.log('close component');
     };
   }, [visible]);
 
@@ -34,16 +23,11 @@ const AuthDialog: FC<Props> = ({ onClose, visible }) => {
     <Dialog open={visible} onClose={onClose} aria-labelledby="responsive-dialog-title" fullWidth maxWidth="xs">
       <DialogContent>
         <DialogContentText>
-          
-          {formType === 'main' && (
-           <Main setFormType = {() => setFormType('login')} />
-          )}
+          {formType === 'main' && <Main setFormType={() => setFormType('login')} />}
           {formType === 'login' && (
-            <Login openRegister = {() => setFormType('register')} openMain = {() => setFormType('main')} />
+            <Login openRegister={() => setFormType('register')} openMain={() => setFormType('main')} />
           )}
-           {formType === 'register' && (
-            <Register setFormType = {() => setFormType('main')} />
-          )}
+          {formType === 'register' && <Register setFormType={() => setFormType('main')} />}
         </DialogContentText>
       </DialogContent>
     </Dialog>
